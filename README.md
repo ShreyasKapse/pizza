@@ -18,7 +18,7 @@ Welcome to the **Pizza App** repository! This is a simple and responsive web app
 ## 🛠️ Technologies Used
 
 - **Frontend**: HTML, CSS, Bootstrap
-- **Deployment**: Netlify Demo
+- **Deployment**: [Netlify Demo](https://fantastic-crostata-c418d2.netlify.app/)
 
 ---
 
@@ -40,18 +40,6 @@ To run this project locally, follow these steps:
 
 ---
 
-## 🖼️ Screenshots
-
-Here are some screenshots of the app:
-
-![Home Page](/screenshots/home.png)  
-*Home Page - Browse the menu and add pizzas to your cart.*
-
-![Cart Page](/screenshots/cart.png)  
-*Cart Page - Review your order before checkout.*
-
----
-
 ## 🧩 Folder Structure
 
 Here’s an overview of the project structure:
@@ -59,9 +47,9 @@ Here’s an overview of the project structure:
 ```
 pizza/
 ├── index.html        # Main HTML file
-├── styles/           # CSS files
+├── CSS/           # CSS files
 │   └── style.css     # Custom CSS
-├── assets/           # Images, icons, etc.
+├── Images/           # Images, icons, etc.
 ├── README.md         # This file
 └── .gitignore        # Git ignore file
 ```
@@ -99,7 +87,7 @@ If you have any questions or suggestions, feel free to reach out:
 
 - **Shreyas Kapse**  
   - GitHub: [ShreyasKapse](https://github.com/ShreyasKapse)  
-  - Email: your-email@example.com  
+  - Email: shreyaskapse1234@gmail.com  
 
 ---
 
@@ -107,10 +95,4 @@ Enjoy your pizza! 🍕✨
 
 ---
 
-### Notes:
-1. Replace `/screenshots/home.png` and `/screenshots/cart.png` with actual screenshots of your project.
-2. Update the **Contact** section with your email or other contact details.
-3. If you have a live demo, add a link to it under the **Features** section.
-
-Let me know if you need further assistance! 😊
  
