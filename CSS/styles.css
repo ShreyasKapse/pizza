@@ -253,83 +253,121 @@ css variables
     transform: translateY(3px);
     box-shadow: 0 40px 70px rgba(0,0,0,0.5);
 } */
-.blog{
-    position: relative;
-    height: 500px;
+.blog {
+    padding: 40px 20px;
+    background: #f9f9f9;
 }
-#blog-area{
-    margin-top: 10px;
-    display: flex;
+
+#blog-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
 }
-#blog-area .box-1{
-    border: none;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 30px;
-    color: rgb(14, 13, 13);
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    transition: 0.5s;
+
+.box-1 {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
-.box-1:hover{
-    transform: translateY(10px);
-    box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+
+.box-1:hover {
+    transform: translateY(-10px);
 }
-.box-1 img{
-    height: 160px;
-    margin: auto;
-    display: block;
-    border-radius: 5px;
+
+.box-1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
 }
-.btn-2{
-    float: right;
-    margin-right:130px;
-    margin-top:-18px;
-    padding: 3px 10px;
+
+.box-1 .content {
+    padding: 20px;
+}
+
+.box-1 h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.box-1 p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 8px 20px;
     background: linear-gradient(to right,#fb5283,#ff3527);
     color: #fff;
-    cursor: pointer;
     border: none;
     border-radius: 5px;
-}
-.blog h1{
-    color: #3E3E3E;
-    letter-spacing: 2px;
-    margin: 20px 0;
-    font-size: 35px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    transform: translateX(-20px);
-}
-/* #contact{
-    position: relative;
-}
-#contact::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: url(img1/cont.jpg) no-repeat center center/cover;
-} */
-#contact-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-#contact-box input,
-#contact-box textarea{
-    width: 100%;
-    padding: 0.5rem;
-}
-#contact-box form{
-    width: 40%;
-}
-#contact-box label{
-    font-size: 20px;
+.btn-2:hover {
+    background: linear-gradient(to right,#ff3527,#fb5283);
+    transform: translateY(-2px);
 }
 
+/* Contact Form Styles */
+#contact {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+#contact-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #fb5283;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    transition: all 0.3s ease;
+}
 
 .section-1{
     margin-left: 100px;
@@ -403,4 +441,171 @@ h2{
 .footer-bottom{
     margin-top: 10px;
     text-align: center;
+}
+
+/* Add these media queries at the end of your CSS file */
+
+/* For tablets and smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #logo {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #navbar ul {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .img {
+        display: none; /* Hide the profile image on mobile */
+    }
+
+    #services {
+        flex-direction: column;
+    }
+
+    #services .box {
+        margin: 20px 10px;
+    }
+
+    .btn-1 {
+        margin: 20px auto;
+        display: block;
+    }
+
+    #home {
+        padding: 3px 20px;
+        height: 400px;
+    }
+
+    .h-pri {
+        font-size: 2rem;
+    }
+
+    #clients {
+        flex-wrap: wrap;
+    }
+
+    .client-item {
+        flex: 0 0 33.33%;
+        margin: 10px 0;
+    }
+
+    .imggalr {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+    }
+
+    #blog-area {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .box-1 {
+        margin: 10px 0;
+    }
+
+    #contact-box {
+        padding: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        float: none;
+        margin-top: 20px;
+    }
+
+    .section-1 {
+        margin-left: 20px;
+    }
+
+    .section-1 p {
+        width: 100%;
+    }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    #navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        margin: 5px 0;
+    }
+
+    .client-item {
+        flex: 0 0 50%;
+    }
+
+    .imggalr {
+        grid-template-columns: 1fr;
+    }
+
+    .imggalr .box.b,
+    .imggalr .box.f,
+    .imggalr .box.j,
+    .imggalr .box.i {
+        grid-column: span 1;
+    }
+
+    .h-pri {
+        font-size: 1.8rem;
+    }
+
+    #home p {
+        font-size: 0.9rem;
+    }
+
+    .social a i {
+        font-size: 16px;
+    }
+}
+
+/* For larger screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    #services {
+        justify-content: space-between;
+    }
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    #navbar ul {
+        display: none;
+    }
+
+    #navbar ul.show {
+        display: flex;
+    }
 }
