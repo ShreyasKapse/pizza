@@ -174,85 +174,165 @@ css variables
     background: linear-gradient(45deg,#87adfe,#ff77cd);
 }
 
-/* client area here  */
-#client-section{
-   height: 344px;
-   position: relative;
+/* Client Section Styles */
+#client-section {
+    padding: 40px 0;
+    background: #f9f9f9;
+    min-height: 300px;
+    position: relative;
 }
-#clients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-#clients img{
-    height: 140px;
-}
-.container h1{
+
+.container h1 {
+    text-align: center;
     color: #3E3E3E;
     letter-spacing: 2px;
-    margin: 20px 0;
-    font-size: 35px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    transform: translateX(-20px);
-   
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    box-shadow: none;
+    transform: none;
 }
-.client-item{
-    margin-top: 60px;
-}
-#client-section::before{
-    content: '';
-    position: absolute;
-    background: url(png/kl3.jpg) no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.4;
 
-}
-/* image gallery  */
-.imggalr{
-    width: 100%;
+#clients {
     display: grid;
-    grid-auto-flow: dense;
-    grid-template: "1fr 1fr 1fr 1fr 1fr" 33.33vh
-    "1fr 1fr 1fr 1fr 1fr" 33.33vh
-    "1fr 1fr 1fr 1fr 1fr" 33.33vh;               
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
 }
-.imggalr .box{
+
+.client-item {
+    margin: 0;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.client-item:hover {
+    transform: scale(1.1);
+}
+
+.client-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Gallery Section Styles */
+.gallery {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.gallery h1 {
+    text-align: center;
+    color: #3E3E3E;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    box-shadow: none;
+    transform: none;
+}
+
+.imggalr {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    grid-auto-rows: 250px;
+}
+
+.imggalr .box {
     position: relative;
-    margin: 5px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.imggalr .box.a{
+
+.imggalr .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imggalr .box:hover img {
+    transform: scale(1.1);
+}
+
+.imggalr .box.a {
     grid-row: span 2;
 }
+
 .imggalr .box.b,
 .imggalr .box.f,
-.imggalr .box.j,
-.imggalr .box.i{
+.imggalr .box.j {
     grid-column: span 2;
 }
-.imggalr .box img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    box-shadow: -9px 9px 18px #e6e6e6, 9px -9px 18px #fff;
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .imggalr {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
-.gallery h1{
-    background: #ffffff;
-    color: #3E3E3E;
-    letter-spacing: 2px;
-    margin: 20px 0;
-    font-size: 35px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    transform: translateX(-20px);
+
+@media screen and (max-width: 768px) {
+    #clients {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .client-item {
+        padding: 10px;
+    }
+
+    .imggalr {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .imggalr .box.b,
+    .imggalr .box.f,
+    .imggalr .box.j {
+        grid-column: span 1;
+    }
+
+    .container h1,
+    .gallery h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
 }
-/* .gallery h1:hover{
-    transform: translateY(3px);
-    box-shadow: 0 40px 70px rgba(0,0,0,0.5);
-} */
+
+@media screen and (max-width: 480px) {
+    #clients {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imggalr {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .imggalr .box.a {
+        grid-row: span 1;
+    }
+
+    .container h1,
+    .gallery h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+}
+
 .blog {
     padding: 40px 20px;
     background: #f9f9f9;
