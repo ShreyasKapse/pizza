@@ -16,6 +16,7 @@
     <div id="logo">
         <img src="/Images/img/logo.png" alt="logo">
     </div>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     <ul>
         <li class="active"><a class="">Home</a></li>
         <li class="item"><a>About Us</a></li>
@@ -129,52 +130,52 @@
   </main> 
 </section>
  <div class="blog">
-      <h1 class="h-pri center">Blog </h1>
-     <section id="blog-area">
+    <h1 class="h-pri center">Blog</h1>
+    <section id="blog-area">
         <div class="box-1">
-            <img src="/Images/img1/blog3.jpg" alt="">
-            <h2 class="h-secon center">
-                Fizza
-            </h2>
-            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet veritatis perspiciatis sapiente quod</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, cupiditate quasi et praesentium distinctio voluptatibus repudiandae delectus dolores labore nemo!.</p>
-            <button class="btn-2">Read more..</button>
-      </div>
-      <div class="box-1">
-          <img src="/Images/img1/blog2.jpg" alt="">
-          <h2 class="h-secon center">
-              Fizza House
-          </h2>
-          <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet veritatis perspiciatis sapiente quod</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, cupiditate quasi et praesentium distinctio voluptatibus repudiandae delectus dolores labore nemo!.</p>
-          <button class="btn-2">Read more..</button>
-      </div>
-     </section>
- </div>
+            <img src="/Images/img1/blog3.jpg" alt="Blog post image">
+            <div class="content">
+                <h2 class="h-secon">Pizza Perfection</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet veritatis perspiciatis sapiente quod officiis dolor.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, cupiditate quasi et praesentium distinctio!</p>
+                <button class="btn-2">Read more</button>
+            </div>
+        </div>
+        <div class="box-1">
+            <img src="/Images/img1/blog2.jpg" alt="Blog post image">
+            <div class="content">
+                <h2 class="h-secon">Pizza House Special</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet veritatis perspiciatis sapiente quod officiis dolor.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, cupiditate quasi et praesentium distinctio!</p>
+                <button class="btn-2">Read more</button>
+            </div>
+        </div>
+    </section>
+</div>
  <section id="contact">
-     <h1 class="h-pri center">Contact Us</h1>
-     <div id="contact-box">
-         <form action="">
-             <div class="from-group">
-                 <label for="name">Name:</label>
-                 <input type="text" name="name" id="name" placeholder="Enter Your Name">
-             </div>
-             <div class="from-group">
-                <label for="name">Email:</label>
-                <input type="text" name="name" id="name" placeholder="Enter Your Email">
+    <h1 class="h-pri center">Contact Us</h1>
+    <div id="contact-box">
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
             </div>
-            <div class="from-group">
-                <label for="name">Phone:</label>
-                <input type="text" name="name" id="name" placeholder="Enter You Phone">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
             </div>
-            <div class="from-group">
-                <label for="massage">Massage</label>
-                <textarea name="massage" id="massage" cols="30" rows="10">Message</textarea>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
             </div>
-            <button class="btn">Submit</button>
-         </form>
-     </div>
- </section>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
    
 
  <footer class="footer">
@@ -225,6 +226,11 @@
 </footer>
 
 <script src="https://kit.fontawesome.com/56cca1a73a.js" crossorigin="anonymous"></script>
-
+<script>
+function toggleMenu() {
+    const navUl = document.querySelector('#navbar ul');
+    navUl.classList.toggle('show');
+}
+</script>
 </body>
 </html>
